@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#08090d"><meta name="description" content="ShieldCore - API security, transaction risk management and customer operations.">
+  <title>ShieldCore | Risk Command Center</title>
+  <link rel="icon" href="assets/shieldcore-mark.png"><link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="app-shell">
+  <aside class="sidebar" id="sidebar">
+    <div class="brand-lockup"><img src="assets/shieldcore-lockup.png" alt="ShieldCore"><span class="brand-caption">BUSINESS RISK & CYBERSECURITY</span></div>
+    <div class="workspace-switch"><span class="workspace-dot"></span><div><b>ShieldCore Labs</b><small data-i18n="workspace">مساحة العمل التجريبية</small></div><span class="chevron">⌄</span></div>
+    <div class="nav-caption" data-i18n="workspaceNav">مساحة العمل</div>
+    <nav class="main-nav">
+      <button class="nav-item active" data-view="overview"><span class="nav-ico">◈</span><span data-i18n="overview">نظرة عامة</span></button>
+      <button class="nav-item" data-view="transactions"><span class="nav-ico">⇄</span><span data-i18n="transactions">المعاملات</span><em id="nav-tx-count">12</em></button>
+      <button class="nav-item" data-view="cases"><span class="nav-ico">⬡</span><span data-i18n="cases">حالات المخاطر</span><em class="alert-count" id="nav-case-count">4</em></button>
+      <button class="nav-item" data-view="customers"><span class="nav-ico">◎</span><span data-i18n="customers">العملاء CRM</span></button>
+      <button class="nav-item" data-view="api"><span class="nav-ico">⌘</span><span data-i18n="api">مختبر API</span></button>
+    </nav>
+    <div class="nav-caption" data-i18n="management">الإدارة</div>
+    <nav class="main-nav">
+      <button class="nav-item" data-view="insights"><span class="nav-ico">▥</span><span data-i18n="insights">التحليلات</span></button>
+      <button class="nav-item" data-view="strategy"><span class="nav-ico">◇</span><span data-i18n="strategy">الاستراتيجية</span></button>
+      <button class="nav-item" data-view="settings"><span class="nav-ico">⚙</span><span data-i18n="settings">الإعدادات والربط</span></button>
+    </nav>
+    <div class="sidebar-bottom"><div class="security-status"><span class="pulse"></span><div><b data-i18n="demoMode">وضع العرض التجريبي</b><small id="mode-label">Local demo • browser storage</small></div></div><div class="side-footer">SHIELDCORE <span>v1.0 DEMO</span></div></div>
+  </aside>
+  <main class="main-area">
+    <header class="topbar">
+      <div class="mobile-brand"><img src="assets/shieldcore-mark.png" alt="SC"> <b>SHIELDCORE</b></div>
+      <button class="mobile-menu" id="mobile-menu">☰</button>
+      <div class="breadcrumb"><span>SHIELDCORE</span><i>/</i><b id="crumb-label">نظرة عامة</b></div>
+      <div class="top-actions"><div class="live-pill"><span class="pulse"></span><span data-i18n="demoEnvironment">بيئة تجريبية</span></div><button class="icon-btn" id="lang-toggle" title="Switch language">EN</button><button class="icon-btn" id="reset-demo" title="Reset demo">↻</button><div class="avatar">SC</div></div>
+    </header>
+    <section class="content" id="view-container"></section>
+    <footer class="page-footer"><span>© 2026 SHIELDCORE. All rights reserved.</span><span data-i18n="prototypeNotice">نموذج أكاديمي تجريبي - لا تستخدم بيانات حقيقية.</span></footer>
+  </main>
+</div>
+<div class="toast" id="toast"></div>
+<div class="modal-backdrop hidden" id="modal-backdrop"><div class="modal" id="modal"><button class="modal-close" id="modal-close">×</button><div id="modal-content"></div></div></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="config.js"></script><script src="app.js"></script>
+</body></html>
